@@ -7,6 +7,7 @@ import { ThemeProvider } from "./components/theme-provider";
 import { useAuth } from "@/hooks/useAuth";
 import NotFound from "@/pages/not-found";
 import Home from "./pages/home";
+import Collections from "./pages/collections";
 import ArchiveView from "./pages/archive-view";
 
 function Router() {
@@ -16,6 +17,7 @@ function Router() {
   return (
     <Switch>
       <Route path="/" component={Home} />
+      <Route path="/archives/:archiveId/collections" component={Collections} />
       <Route path="/archives/:archiveId/collections/:collectionId/folders/:folderId" component={ArchiveView} />
       <Route component={NotFound} />
     </Switch>

@@ -125,9 +125,9 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
-  app.get("/api/archives/:id", async (req, res) => {
+  app.get("/api/archives/:archiveId", async (req, res) => {
     try {
-      const archive = await storage.getArchive(req.params.id);
+      const archive = await storage.getArchive(req.params.archiveId);
       if (!archive) {
         return res.status(404).json({ message: "Archive not found" });
       }
@@ -135,6 +135,16 @@ export async function registerRoutes(app: Express): Promise<Server> {
     } catch (error) {
       console.error("Error fetching archive:", error);
       res.status(500).json({ message: "Failed to fetch archive" });
+    }
+  });
+
+  app.get("/api/archives/:archiveId/collections", async (req, res) => {
+    try {
+      const collections = await storage.getCollectionsByArchive(req.params.archiveId);
+      res.json(collections);
+    } catch (error) {
+      console.error("Error fetching collections:", error);
+      res.status(500).json({ message: "Failed to fetch collections" });
     }
   });
 
@@ -150,15 +160,6 @@ export async function registerRoutes(app: Express): Promise<Server> {
   });
 
   // Collection routes
-  app.get("/api/archives/:archiveId/collections", async (req, res) => {
-    try {
-      const collections = await storage.getCollectionsByArchive(req.params.archiveId);
-      res.json(collections);
-    } catch (error) {
-      console.error("Error fetching collections:", error);
-      res.status(500).json({ message: "Failed to fetch collections" });
-    }
-  });
 
   app.get("/api/collections/:id", async (req, res) => {
     try {
