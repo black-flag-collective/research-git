@@ -1,0 +1,27 @@
+a GUI front end for a git-like version control system that lets researchers share their notes and annotations about the archival collections they are working in. Access to these notes could greatly expedite one of the slowest and most expensive parts of research--digging through archives with no idea if what's in there is what you're looking for. I can think of a couple of different business models to sustain this, but I'm probably getting ahead of myself. 
+
+Key Features
+User-Friendly Interface (GUI): 
+A web or desktop application with a clean, intuitive design that abstracts Git’s complexity. Users interact via buttons and menus instead of command-line tools.  
+Markdown editor with WYSIWYG functionality (e.g., bold, bullet points, headers) to simplify note creation.
+Archive-specific dashboards: Users select an archive (e.g., "National Archives at College Park") or collection (e.g., "InBae Yoon Papers") to view or contribute notes.  
+Crowdsourcing Annotations: 
+Pull Requests (PRs): After creating/modifying notes about a specific box/folder, users submit PRs to propose changes to the main repository. In the long term, a small LLM could be used to summarize changes (e.g., "User A added 3 sentences about correspondence in Folder 8").  
+Branching: Users can create new branches to reinterpret archive contents under alternative frameworks/disciplines (e.g., InBae Yoon's papers about the contraceptive he designed might have the branches "Reproductive Health" and "Business and Medicine").
+Search & Navigation:
+Advanced search filters by repository, branch, keyword, date, or contributor to locate notes relevant to a research question. 
+Visual hierarchy of archives (boxes → folders → subfolders) to mirror physical structures and aid navigation. 
+User Roles & Profiles:
+Researchers create profiles to track contributions, build reputations for expertise (e.g., "Specializes in Cold War science diplomacy studies"), and connect with peers. Researcher profiles can help journal editors identify relevant peer-reviewers.  
+Administrators (me to start, then volunteer moderators, then maybe archive staff) receive notifications for PRs and conflicts, with tools to compare changes, approve/reject edits, or merge branches.  
+
+Key Outcomes
+Reduced Barriers to Access: Graduate students or underfunded researchers can use existing notes to avoid redundant archival visits.  
+Epistemic Pluralism: Forking allows marginalized or nontraditional interpretations of archives
+Efficiency for On-Site Researchers: Users identify items of interest using community notes, saving time (and money) during physical visits.  
+
+Example Workflow
+A researcher visits the InBae Yoon Papers at the National Museum of American History.  
+They access the app, type in a WYSIWYG editor to describe Folder 8’s contents (e.g., "Contains clinical study data on Fallope Ring"), and submit a PR.  
+Moderators review the PR, merging it into the main branch. Another user later creates a branch titled "Feminist Health Perspectives" to reframe the folder’s label and description.  
+A graduate student preparing for an on-site visit uses the app to search Folder 8 in both branches, using the diverse interpretations to refine their research focus and save time on-site.
