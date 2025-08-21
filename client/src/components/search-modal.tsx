@@ -70,7 +70,7 @@ export default function SearchModal({ open, onOpenChange }: SearchModalProps) {
                   <SelectValue placeholder="All Archives" />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="">All Archives</SelectItem>
+                  <SelectItem value="all">All Archives</SelectItem>
                   {archives?.map((archive) => (
                     <SelectItem key={archive.id} value={archive.id}>
                       {archive.name}
@@ -88,7 +88,7 @@ export default function SearchModal({ open, onOpenChange }: SearchModalProps) {
                   <SelectValue placeholder="All Branches" />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="">All Branches</SelectItem>
+                  <SelectItem value="all">All Branches</SelectItem>
                   <SelectItem value="main">main</SelectItem>
                   <SelectItem value="feminist-health-perspectives">feminist-health-perspectives</SelectItem>
                   <SelectItem value="business-medicine">business-medicine</SelectItem>

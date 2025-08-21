@@ -9,7 +9,7 @@ export default function Header() {
 
   const initials = user?.firstName && user?.lastName 
     ? `${user.firstName[0]}${user.lastName[0]}` 
-    : user?.email?.[0]?.toUpperCase() || 'U';
+    : user?.email?.[0]?.toUpperCase() || 'AR';
 
   return (
     <>
@@ -51,20 +51,12 @@ export default function Header() {
               <span className="text-sm text-slate-600">
                 {user?.firstName && user?.lastName 
                   ? `${user.firstName} ${user.lastName}`
-                  : user?.email || 'User'
+                  : user?.email || 'Alex Researcher'
                 }
               </span>
               <div className="w-8 h-8 bg-slate-300 rounded-full flex items-center justify-center text-sm font-medium text-slate-600">
                 {initials}
               </div>
-              <Button 
-                variant="ghost" 
-                size="sm"
-                onClick={() => window.location.href = '/api/logout'}
-                className="text-slate-600 hover:text-slate-900"
-              >
-                Logout
-              </Button>
             </div>
           </div>
         </div>

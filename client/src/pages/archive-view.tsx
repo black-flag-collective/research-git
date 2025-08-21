@@ -1,10 +1,10 @@
 import { useParams } from "wouter";
 import { useQuery } from "@tanstack/react-query";
 import { useState } from "react";
-import Header from "@/components/header";
-import ArchiveSidebar from "@/components/archive-sidebar";
-import MarkdownEditor from "@/components/markdown-editor";
-import ActivitySidebar from "@/components/activity-sidebar";
+import Header from "../components/header";
+import ArchiveSidebar from "../components/archive-sidebar";
+import MarkdownEditor from "../components/markdown-editor";
+import ActivitySidebar from "../components/activity-sidebar";
 import { Collection, Folder, Note } from "@shared/schema";
 
 export default function ArchiveView() {

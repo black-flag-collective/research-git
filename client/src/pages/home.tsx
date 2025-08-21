@@ -2,7 +2,7 @@ import { useQuery } from "@tanstack/react-query";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
-import Header from "@/components/header";
+import Header from "../components/header";
 import { Archive } from "@shared/schema";
 
 export default function Home() {
@@ -47,7 +47,11 @@ export default function Home() {
                   <p className="text-sm text-slate-600 mb-4">
                     {archive.description || "No description available"}
                   </p>
-                  <Button variant="outline" className="w-full">
+                  <Button 
+                    variant="outline" 
+                    className="w-full"
+                    onClick={() => window.location.href = `/archives/${archive.id}/collections`}
+                  >
                     Browse Collections
                   </Button>
                 </CardContent>

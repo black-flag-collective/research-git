@@ -5,23 +5,17 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { useAuth } from "@/hooks/useAuth";
 import NotFound from "@/pages/not-found";
-import Landing from "@/pages/landing";
-import Home from "@/pages/home";
-import ArchiveView from "@/pages/archive-view";
+import Home from "./pages/home";
+import ArchiveView from "./pages/archive-view";
 
 function Router() {
-  const { isAuthenticated, isLoading } = useAuth();
+  const { isAuthenticated } = useAuth();
 
+  // Always show the authenticated UI in prototype mode
   return (
     <Switch>
-      {isLoading || !isAuthenticated ? (
-        <Route path="/" component={Landing} />
-      ) : (
-        <>
-          <Route path="/" component={Home} />
-          <Route path="/archives/:archiveId/collections/:collectionId/folders/:folderId" component={ArchiveView} />
-        </>
-      )}
+      <Route path="/" component={Home} />
+      <Route path="/archives/:archiveId/collections/:collectionId/folders/:folderId" component={ArchiveView} />
       <Route component={NotFound} />
     </Switch>
   );
