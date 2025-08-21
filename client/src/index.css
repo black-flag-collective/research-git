@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 :root {
+  /* Default Research Theme */
   --background: hsl(210, 20%, 98%);
   --foreground: hsl(210, 25%, 7.8431%);
   --card: hsl(0, 0%, 100%);
@@ -22,11 +23,6 @@
   --border: hsl(210, 30%, 90%);
   --input: hsl(210, 30%, 97%);
   --ring: hsl(220, 70%, 50%);
-  --chart-1: hsl(220, 70%, 50%);
-  --chart-2: hsl(160, 70%, 45%);
-  --chart-3: hsl(30, 70%, 55%);
-  --chart-4: hsl(280, 70%, 50%);
-  --chart-5: hsl(340, 70%, 50%);
   --sidebar: hsl(0, 0%, 100%);
   --sidebar-foreground: hsl(210, 25%, 7.8431%);
   --sidebar-primary: hsl(220, 70%, 50%);
@@ -35,49 +31,104 @@
   --sidebar-accent-foreground: hsl(210, 25%, 7.8431%);
   --sidebar-border: hsl(210, 30%, 90%);
   --sidebar-ring: hsl(220, 70%, 50%);
+  
+  /* Typography */
   --font-sans: Inter, system-ui, sans-serif;
   --font-serif: Georgia, serif;
-  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+  --font-mono: JetBrains Mono, Fira Code, monospace;
+  
+  /* Layout */
   --radius: 0.5rem;
-}
-
-.dark {
-  --background: hsl(222, 84%, 4.9%);
-  --foreground: hsl(210, 40%, 98%);
-  --card: hsl(222, 84%, 4.9%);
-  --card-foreground: hsl(210, 40%, 98%);
-  --popover: hsl(222, 84%, 4.9%);
-  --popover-foreground: hsl(210, 40%, 98%);
-  --primary: hsl(217, 91%, 60%);
-  --primary-foreground: hsl(0, 0%, 100%);
-  --secondary: hsl(217, 32%, 17%);
-  --secondary-foreground: hsl(210, 40%, 98%);
-  --muted: hsl(217, 32%, 17%);
-  --muted-foreground: hsl(215, 20%, 65%);
-  --accent: hsl(217, 32%, 17%);
-  --accent-foreground: hsl(210, 40%, 98%);
-  --destructive: hsl(0, 62%, 30%);
-  --destructive-foreground: hsl(210, 40%, 98%);
-  --border: hsl(217, 32%, 17%);
-  --input: hsl(217, 32%, 17%);
-  --ring: hsl(217, 91%, 60%);
+  --header-height: 3.5rem;
+  --sidebar-width: 20rem;
+  
+  /* Chart Colors */
   --chart-1: hsl(220, 70%, 50%);
   --chart-2: hsl(160, 70%, 45%);
   --chart-3: hsl(30, 70%, 55%);
   --chart-4: hsl(280, 70%, 50%);
   --chart-5: hsl(340, 70%, 50%);
-  --sidebar: hsl(222, 84%, 4.9%);
+  
+  /* Archive-specific colors */
+  --archive-blue: hsl(220, 70%, 50%);
+  --archive-emerald: hsl(160, 70%, 45%);
+  --archive-amber: hsl(30, 70%, 55%);
+  --archive-slate: hsl(215, 25%, 27%);
+}
+
+/* Dark Theme */
+.dark {
+  --background: hsl(222.2, 84%, 4.9%);
+  --foreground: hsl(210, 40%, 98%);
+  --card: hsl(222.2, 84%, 4.9%);
+  --card-foreground: hsl(210, 40%, 98%);
+  --popover: hsl(222.2, 84%, 4.9%);
+  --popover-foreground: hsl(210, 40%, 98%);
+  --primary: hsl(217.2, 91.2%, 59.8%);
+  --primary-foreground: hsl(222.2, 84%, 4.9%);
+  --secondary: hsl(217.2, 32.6%, 17.5%);
+  --secondary-foreground: hsl(210, 40%, 98%);
+  --muted: hsl(217.2, 32.6%, 17.5%);
+  --muted-foreground: hsl(215, 20.2%, 65.1%);
+  --accent: hsl(217.2, 32.6%, 17.5%);
+  --accent-foreground: hsl(210, 40%, 98%);
+  --destructive: hsl(0, 62.8%, 30.6%);
+  --destructive-foreground: hsl(210, 40%, 98%);
+  --border: hsl(217.2, 32.6%, 17.5%);
+  --input: hsl(217.2, 32.6%, 17.5%);
+  --ring: hsl(217.2, 91.2%, 59.8%);
+  --sidebar: hsl(222.2, 84%, 4.9%);
   --sidebar-foreground: hsl(210, 40%, 98%);
-  --sidebar-primary: hsl(217, 91%, 60%);
-  --sidebar-primary-foreground: hsl(0, 0%, 100%);
-  --sidebar-accent: hsl(217, 32%, 17%);
-  --sidebar-accent-foreground: hsl(210, 40%, 98%);
-  --sidebar-border: hsl(217, 32%, 17%);
-  --sidebar-ring: hsl(217, 91%, 60%);
-  --font-sans: Inter, system-ui, sans-serif;
-  --font-serif: Georgia, serif;
-  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
-  --radius: 0.5rem;
+}
+
+/* Archive Theme */
+.theme-archive {
+  --background: hsl(24, 20%, 97%);
+  --foreground: hsl(20, 14.3%, 4.1%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(20, 14.3%, 4.1%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(20, 14.3%, 4.1%);
+  --primary: hsl(24, 45%, 58%);
+  --primary-foreground: hsl(60, 9.1%, 97.8%);
+  --secondary: hsl(60, 4.8%, 95.9%);
+  --secondary-foreground: hsl(24, 9.8%, 10%);
+  --muted: hsl(60, 4.8%, 95.9%);
+  --muted-foreground: hsl(25, 5.3%, 44.7%);
+  --accent: hsl(60, 4.8%, 95.9%);
+  --accent-foreground: hsl(24, 9.8%, 10%);
+  --destructive: hsl(0, 84.2%, 60.2%);
+  --destructive-foreground: hsl(60, 9.1%, 97.8%);
+  --border: hsl(20, 5.9%, 90%);
+  --input: hsl(20, 5.9%, 90%);
+  --ring: hsl(24, 45%, 58%);
+  --sidebar: hsl(30, 20%, 99%);
+  --sidebar-foreground: hsl(20, 14.3%, 4.1%);
+}
+
+/* Research Theme (default) */
+.theme-research {
+  --background: hsl(210, 20%, 98%);
+  --foreground: hsl(210, 25%, 7.8431%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(210, 25%, 7.8431%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(210, 25%, 7.8431%);
+  --primary: hsl(220, 70%, 50%);
+  --primary-foreground: hsl(0, 0%, 100%);
+  --secondary: hsl(210, 40%, 96%);
+  --secondary-foreground: hsl(210, 25%, 7.8431%);
+  --muted: hsl(210, 40%, 96%);
+  --muted-foreground: hsl(210, 25%, 45%);
+  --accent: hsl(210, 40%, 96%);
+  --accent-foreground: hsl(210, 25%, 7.8431%);
+  --destructive: hsl(0, 84%, 60%);
+  --destructive-foreground: hsl(0, 0%, 100%);
+  --border: hsl(210, 30%, 90%);
+  --input: hsl(210, 30%, 97%);
+  --ring: hsl(220, 70%, 50%);
+  --sidebar: hsl(0, 0%, 100%);
+  --sidebar-foreground: hsl(210, 25%, 7.8431%);
 }
 
 @layer base {
@@ -86,39 +137,72 @@
   }
 
   body {
-    @apply font-sans antialiased bg-background text-foreground;
+    @apply font-sans antialiased bg-background text-foreground transition-colors duration-200;
   }
 
+  /* Typography enhancements */
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold text-foreground;
+  }
+
+  /* Focus styles for accessibility */
+  *:focus-visible {
+    @apply outline-none ring-2 ring-ring ring-offset-2 ring-offset-background;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-muted;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-muted-foreground opacity-30 rounded-md;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-muted-foreground opacity-50;
+  }
+
+  /* Prose styling for markdown content */
   .prose {
     @apply max-w-none text-foreground;
   }
 
   .prose h1 {
-    @apply text-2xl font-bold text-foreground mb-4;
+    @apply text-2xl font-bold text-foreground mb-4 mt-8 first:mt-0;
   }
 
   .prose h2 {
-    @apply text-xl font-semibold text-foreground mb-3;
+    @apply text-xl font-semibold text-foreground mb-3 mt-6;
   }
 
   .prose h3 {
-    @apply text-lg font-medium text-foreground mb-2;
+    @apply text-lg font-medium text-foreground mb-2 mt-4;
+  }
+
+  .prose h4 {
+    @apply text-base font-medium text-foreground mb-2 mt-4;
   }
 
   .prose p {
-    @apply mb-3 text-foreground;
+    @apply mb-4 text-foreground leading-relaxed;
   }
 
   .prose ul {
-    @apply list-disc pl-6 mb-3;
+    @apply list-disc pl-6 mb-4 space-y-1;
   }
 
   .prose ol {
-    @apply list-decimal pl-6 mb-3;
+    @apply list-decimal pl-6 mb-4 space-y-1;
   }
 
   .prose li {
-    @apply mb-1;
+    @apply text-foreground;
   }
 
   .prose strong {
@@ -126,7 +210,31 @@
   }
 
   .prose em {
-    @apply italic;
+    @apply italic text-foreground;
+  }
+
+  .prose code {
+    @apply bg-muted px-1.5 py-0.5 rounded text-sm font-mono text-foreground;
+  }
+
+  .prose pre {
+    @apply bg-muted p-4 rounded-lg overflow-x-auto text-sm font-mono mb-4;
+  }
+
+  .prose blockquote {
+    @apply border-l-4 border-muted-foreground pl-4 my-4 text-muted-foreground italic;
+  }
+
+  .prose a {
+    @apply text-primary hover:underline;
+  }
+
+  /* Utility classes */
+  .line-clamp-1 {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
 
   .line-clamp-2 {
@@ -134,5 +242,45 @@
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
+  }
+
+  .line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  /* Animation utilities */
+  .animate-in {
+    animation-fill-mode: both;
+  }
+
+  .fade-in {
+    animation: fade-in 0.2s ease-out;
+  }
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .slide-up {
+    animation: slide-up 0.2s ease-out;
+  }
+
+  @keyframes slide-up {
+    from {
+      transform: translateY(10px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
   }
 }

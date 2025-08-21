@@ -37,6 +37,7 @@ Preferred communication style: Simple, everyday language.
 - **Pull Request System**: Propose changes to existing notes with community review
 - **Advanced Search**: Filter by archive, collection, branch, keyword, contributor, and date
 - **Activity Tracking**: Real-time updates on pull requests, merges, and community activity
+- **Theme System**: Fully customizable theme system with multiple presets and easy configuration
 
 ### Database Schema
 - **Users**: Profile information, authentication data, contribution tracking
@@ -58,9 +59,10 @@ Preferred communication style: Simple, everyday language.
 - **Passport.js**: Authentication middleware with strategy pattern support
 
 ### UI and Styling
-- **Radix UI**: Accessible, unstyled component primitives
-- **Tailwind CSS**: Utility-first CSS framework with custom design system
+- **Radix UI**: Accessible, unstyled component primitives with comprehensive theming system
+- **Tailwind CSS**: Utility-first CSS framework with custom design system and CSS variables
 - **Lucide React**: Consistent icon library
+- **Theme System**: Advanced multi-theme support with Research, Archive, Dark, and Light presets
 
 ### Development Tools
 - **ESBuild**: Fast JavaScript bundler for server-side code
