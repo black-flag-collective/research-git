@@ -22,7 +22,7 @@ export default function Header() {
               <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
                 <Archive className="w-5 h-5 text-primary-foreground" />
               </div>
-              <span className="text-xl font-semibold text-foreground">ArchiveShare</span>
+              <span className="text-xl font-semibold text-foreground">Share</span>
             </div>
             <nav className="hidden md:flex items-center space-x-6">
               <a 
